@@ -1,0 +1,7 @@
+
+<div class="container-fluid d-flex flex-wrap" style="background-color: #18445d;min-height: calc(100vh - 65px)">
+  <div *ngFor="let servicio of servicios" class="col-md-3 mt-3">
+    <app-tarjeta-servicio [nombreServicio]="servicio.nombreServicio" [icon]="servicio.icon"></app-tarjeta-servicio>
+  </div>
+
+</div>
