@@ -1,8 +1,10 @@
-<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" style=" max-height: 20vh">
   <div class="container-fluid d-flex justify-content-between">
     <a class="navbar-brand" href="#">
-      <img src="../../assets/logo-German.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      IDEAS & CONSTRUCCIONES ICON
+      <div class="d-flex align-items-center" style="margin-left: 40px;">
+        <img src="../../assets/logo-German.png" alt="Logo" width="60" height="48">
+        <span>IDEAS & CONSTRUCCIONES ICON</span>
+      </div>
     </a>
     <div class="collapse navbar-collapse justify-content-end p-1" id="navbarNav">
       <ul class="navbar-nav">
@@ -19,10 +21,13 @@
           <a class="nav-link" routerLink="/proyectos" routerLinkActive="active">PROYECTOS</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" routerLink="/preguntas-frecuentes" routerLinkActive="active">PREGUNTAS FRECUENTES</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" routerLink="/contactanos" routerLinkActive="active">CONTACTENOS</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<router-outlet></router-outlet>
+<router-outlet style=" max-height: 80vh" ></router-outlet>

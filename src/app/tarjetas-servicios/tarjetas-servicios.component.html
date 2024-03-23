@@ -1,7 +1,219 @@
+<div class="w-100" style="min-height: 80vh;background-color: #18445d;">
+  <div class="w-100 pt-3">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          [class.active]="selectedTab === 'Contenedor1'"
+          style="background-color: #1c7dad; margin-right: 20px"
+          href="javascript:void(0)"
+          (click)="selectedTab = 'Contenedor1'"
+        >
+          Construcción, Mantenimiento y Acabados
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          [class.active]="selectedTab === 'Contenedor2'"
+          style="background-color: #1c7dad; margin-right: 20px"
+          href="javascript:void(0)"
+          (click)="selectedTab = 'Contenedor2'"
+        >
+          Instalación de Carpetas Asfálticas
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          [class.active]="selectedTab === 'Contenedor3'"
+          style="background-color: #1c7dad; margin-right: 20px"
+          href="javascript:void(0)"
+          (click)="selectedTab = 'Contenedor3'"
+        >
+          Servicios Eléctricos
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link text-white"
+          [class.active]="selectedTab === 'Contenedor4'"
+          style="background-color: #1c7dad; margin-right: 20px"
+          href="javascript:void(0)"
+          (click)="selectedTab = 'Contenedor4'"
+        >
+          Trabajos Exteriores
+        </a>
+      </li>
+    </ul>
 
-<div class="container-fluid d-flex flex-wrap" style="background-color: #18445d;min-height: calc(100vh - 65px)">
-  <div *ngFor="let servicio of servicios" class="col-md-3 mt-3">
-    <app-tarjeta-servicio [nombreServicio]="servicio.nombreServicio" [icon]="servicio.icon"></app-tarjeta-servicio>
   </div>
 
+  <div
+    class="container-fluid w-100"
+    style="
+      background-color: #1c7dad;
+      background-image: linear-gradient(160deg, #1c7dad 0%, #18445d 100%);
+    "
+    *ngIf="selectedTab === 'Contenedor1'"
+  >
+    <div class="row">
+      <div
+        class="col-md-6 d-flex justify-content-center flex-column"
+        style="height: 82vh"
+      >
+        <h4 class="text-white text-center mb-3">
+          Construcción, Mantenimiento y Acabados
+        </h4>
+        <p class="text-white fs-5">
+          Abarcamos desde la construcción de nuevas viviendas, el mantenimiento
+          de casas y edificios existentes, y los acabados que dan el toque final
+          a una construcción, además de servicios de pintura de casas y la
+          instalación de cielos acústicos y de PVC, también se incluyen
+          servicios de soldadura y balconería.
+        </p>
+        <ul class="text-white fs-5">
+          <li>Construcción de viviendas</li>
+          <li>Mantenimiento de casas y edificios</li>
+          <li>Pintura de casas</li>
+          <li>Soldadura, balconería, instalación de cielo acústico y de PVC</li>
+          <li>Remodelación de interiores</li>
+          <li>Instalación de pisos</li>
+          <li>Plomería</li>
+        </ul>
+      </div>
+      <div
+        class="col-md-6 d-flex justify-content-center align-items-center"
+        style="height: 82vh"
+      >
+        <img
+          src="../../assets/Remodelacion de balcones y zonas comunes/IMG_2706.jpg"
+          class="w-75"
+          style="border-radius: 10px"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="container-fluid col-md-12"
+    style="
+      background-color: #1c7dad;
+      background-image: linear-gradient(160deg, #1c7dad 0%, #18445d 100%);
+    "
+    *ngIf="selectedTab === 'Contenedor2'"
+  >
+    <div class="row">
+      <div
+        class="col-md-6 d-flex justify-content-center flex-column"
+        style="height: 82vh"
+      >
+        <h4 class="text-white text-center mb-3">Instalación de Carpetas Asfálticas</h4>
+
+        <p class="text-white fs-5">
+          Instalación de carpetas asfálticas en terrazas y la aplicación de
+          aislamiento térmico en pintura, techos y terrazas. Estos servicios son
+          esenciales para garantizar la durabilidad y la eficiencia energética
+          de las construcciones.
+        </p>
+        <ul class="text-white fs-5">
+          <li>Instalación de carpeta asfáltica en terrazas</li>
+          <li>
+            Aplicaciones de aislamiento térmico en pintura, techos y terrazas
+          </li>
+          <li>Reparación de filtraciones</li>
+        </ul>
+      </div>
+      <div
+        class="col-md-5 d-flex justify-content-center align-items-center"
+        style="height: 82vh"
+      >
+        <img src="../../assets/techo.png" class="w-100" style="border-radius: 10px"
+        alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="container-fluid col-md-12"
+    style="
+      background-color: #1c7dad;
+      background-image: linear-gradient(160deg, #1c7dad 0%, #18445d 100%);
+    "
+    *ngIf="selectedTab === 'Contenedor3'"
+  >
+    <div class="row">
+      <div
+        class="col-md-6 d-flex justify-content-center flex-column"
+        style="height: 82vh"
+      >
+      <h4 class="text-white text-center mb-3">Servicios Eléctricos</h4>
+
+        <p class="text-white fs-5">
+          Todos los servicios relacionados con la electricidad residencial,
+          abarcamos desde la instalación de nuevos sistemas eléctricos en
+          viviendas hasta la reparación y el mantenimiento de sistemas
+          existentes.
+        </p>
+        <ul class="text-white fs-5">
+          <li>Electricidad residencial</li>
+          <li>Instalación de sistemas de iluminación</li>
+          <li>Mantenimiento de sistemas eléctricos</li>
+        </ul>
+      </div>
+      <div
+        class="col-md-5 d-flex justify-content-center align-items-center"
+        style="height: 82vh"
+      >
+        <img
+          src="../../assets/electricidad.jpeg"
+          style="border-radius: 10px"
+          class="w-100"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="container-fluid col-md-12"
+    style="
+      background-color: #1c7dad;
+      background-image: linear-gradient(160deg, #1c7dad 0%, #18445d 100%);
+    "
+    *ngIf="selectedTab === 'Contenedor4'"
+  >
+    <div class="row">
+      <div
+        class="col-md-6 d-flex justify-content-center flex-column"
+        style="height: 82vh"
+      >
+      <h4 class="text-white text-center mb-3">Trabajos Exteriores</h4>
+
+      <p class="text-white fs-5">
+          Todo tipo de trabajos que se realizan fuera de viviendas o edificios,
+          como la reparación de portones corredizos hasta trabajos de
+          jardinería.
+        </p>
+        <ul class="text-white fs-5">
+          <li>Reparación de portones corredizos</li>
+          <li>Instalación de sistemas de iluminación</li>
+          <li>Trabajos de jardinería</li>
+        </ul>
+      </div>
+      <div
+        class="col-md-5 d-flex justify-content-center align-items-center"
+        style="height: 82vh"
+      >
+        <img
+          src="../../assets/imagenInicio3.png"
+          class="w-100"
+          style="border-radius: 10px"
+
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
 </div>
